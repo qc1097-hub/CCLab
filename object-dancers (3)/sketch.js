@@ -63,6 +63,7 @@ class marshmallow {
     noStroke();
     circle(0, 0, this.size);
     circle(0, 100, this.size);
+    circle(100, 0, this.size);
 
 
 
