@@ -18,7 +18,7 @@ function setup() {
   canvas.parent("p5-canvas-container");
 
   // ...except to adjust the dancer's name on the next line:
-  dancer = new marshmallow(width / 2, height / 2);
+  dancer = new bearfly(width / 2, height / 2);
 }
 
 function draw() {
@@ -32,22 +32,37 @@ function draw() {
 
 // You only code inside this class.
 // Start by giving the dancer your name, e.g. LeonDancer.
-class marshmallow {
+class bearfly {
   constructor(startX, startY) {
     this.x = startX;
     this.y = startY;
 
     // add properties for your dancer here:
 
-    this.size = 40;
-    this.color = color(127, 205, 255);
+    this.size = 100;
+    this.color1 = color(181, 168, 234);
+    this.color2 = color(random(255), random(255), random(255));
+
+    this.angleX = 0;
+    this.angleY = 0;
 
   }
 
   update() {
     // update properties here to achieve
     // your dancer's desired moves and behaviour
+
+    this.angleX = this.angleX + 0.05;
+    this.angleY = this.angleY + 0.05;
+
+
+    this.x = this.x + sin(this.angleX);
+    this.y = this.y + cos(this.angleY) * 2;
+
+
   }
+
+
   display() {
     // the push and pop, along with the translate 
     // places your whole dancer object at this.x and this.y.
@@ -58,16 +73,93 @@ class marshmallow {
     // ******** //
     // ⬇️ draw your dancer from here ⬇️
 
-    fill(this.color);
 
+    //butterfly wings
+    push();
+    rotate(sin(this.angleX) * 0.1);
     noStroke();
-    circle(0, 0, this.size);
-    circle(0, 100, this.size);
-    circle(100, 0, this.size);
+    fill(255);
+    circle(-70, -60, 20);
+    circle(-65, -50, 20);
+    circle(-55, -40, 20);
+    circle(-40, -35, 25);
+    circle(-25, -30, 30);
+    pop();
+
+    push();
+    rotate(-sin(this.angleX) * 0.1);
+    noFill();
+    stroke(255);
+    circle(70, -60, 20);
+    circle(65, -50, 20);
+    circle(55, -40, 20);
+    circle(40, -35, 25);
+    circle(25, -30, 30);
+    pop();
+
+
+    //noStroke();
+
+    push();
+    rotate(PI / 6 + sin(this.angleX) * 0.1);
+    noStroke();
+    fill(this.color1);
+    ellipse(-50, -20, this.size, this.size * 0.35);
+    ellipse(15, -10, this.size * 0.5, this.size * 0.3);
+    pop();
+
+
+    push();
+    noStroke();
+    fill(this.color1);
+    rotate(-PI / 6 - sin(this.angleX) * 0.1);
+    ellipse(50, -20, this.size, this.size * 0.35);
+    ellipse(-15, -10, this.size * 0.5, this.size * 0.3);
+    pop();
 
 
 
+    //small dots
+    push();
+    rotate(- sin(this.angleX) * 0.1);
+    fill(this.color1);
+    noStroke();
+    circle(40, 20, this.size * 0.08);
+    circle(47, 30, this.size * 0.12);
+    circle(52, 40, this.size * 0.07);
+    pop();
 
+    push();
+    noFill();
+    stroke(255);
+    rotate(sin(this.angleX) * 0.1);
+    circle(-40, 20, this.size * 0.08);
+    circle(-47, 30, this.size * 0.12);
+    circle(-52, 40, this.size * 0.07);
+    pop();
+
+
+    //eyes
+    fill(255);
+    circle(-15, -60, this.size * 0.08);
+    circle(15, -60, this.size * 0.08);
+    fill(80, 184, 231);
+    circle(-17, -59, this.size * 0.05);
+    fill(255, 0, 0);
+    circle(13, -59, this.size * 0.05);
+
+    //pink ellipse
+    fill(253, 177, 200);
+    rect(-30, -53, this.size * 0.16, this.size * 0.08);
+    rect(14, -53, this.size * 0.16, this.size * 0.08);
+
+    //mosue
+    fill(255, 193, 0);
+    ellipse(0, -50, this.size * 0.05, this.size * 0.03);
+
+    //ear
+    arc(-20, -73, this.size * 0.2, this.size * 0.2, PI, 0);
+    arc(20, -73, this.size * 0.2, this.size * 0.2, PI, 0);
 
     // ⬆️ draw your dancer above ⬆️
     // ******** //
@@ -78,10 +170,11 @@ class marshmallow {
     // it is using "this" because this function, too, 
     // is a part if your Dancer object.
     // comment it out or delete it eventually.
-    this.drawReferenceShapes()
+    //this.drawReferenceShapes()
 
     pop();
   }
+
   drawReferenceShapes() {
     noFill();
     stroke(255, 0, 0);
