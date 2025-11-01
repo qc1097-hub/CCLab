@@ -67,7 +67,7 @@ function draw() {
     rect(0, 400, width, 100);
     
     
-  //bubbles  
+  //bubbles (just testing)  
   noFill();
   stroke(255);
   strokeWeight(1);
