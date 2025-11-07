@@ -77,8 +77,6 @@ class sakura {
 
     this.angle = 0;
     this.speedR = random(0.01, 0.03);
-    this.windSpeed = random(-5, 5);
-
 
   }
   // methods (functions): particle's behaviors
@@ -173,7 +171,6 @@ class leaves {
 
     this.angle2 = 0;
     this.speedR2 = random(0.01, 0.03);
-    this.windSpeed2 = random(-5, 5);
 
   }
   // methods (functions): particle's behaviors
