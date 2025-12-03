@@ -6,7 +6,16 @@ CCLaboratories Biodiversity Atlas
 */
 
 body {
-    background-color: rgb(217, 224, 252);
+    background-image: url("assets/bg4.jpg");
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+
     color: rgb(0, 0, 0);
 
     font-family: "Funnel Sans", Courier, monospace;

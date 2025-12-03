@@ -1,28 +1,30 @@
+let img1;
+let homepageSound;
+
+function preload() {
+  img1 = loadImage("assets/donut1.png");
+  homepageSound = loadSound("assets/homepage.ogg");
+}
 
 function setup() {
-  let canvas = createCanvas(800, 500);
+  let canvas = createCanvas(800, 400);
   canvas.parent("p5-canvas-container");
-
-
+  imageMode(CENTER);
+  homepageSound.play();
 }
 
 function draw() {
   background(192, 235, 255);
-  fill(217, 224, 252);
-  circle(370, 210, 70);
 
-  fill(220);
-  circle(450, 210, 70);
-
-  fill(220);
-  circle(370, 280, 70);
-
-  fill(220);
-  circle(450, 280, 70);
+  push();
+  translate(width / 2, height / 2);
+  rotate(frameCount * 0.01);
+  image(img1, 0, 0, 400, 400);
+  pop();
 
   let c = get(mouseX, mouseY);
 
-  if (mouseIsPressed && mouseX <= width && mouseX >= 0 && mouseY >= 0 && mouseY <= height && green(c) == 224) {
+  if (mouseIsPressed && red(c) > 245 && red(c) < 255) {
     window.location.href = "task1index.html";
   }
 

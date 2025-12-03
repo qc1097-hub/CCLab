@@ -1,27 +1,31 @@
+let img1;
+let imgbg;
+let homepageSound;
+
+function preload() {
+  img1 = loadImage("assets/donut.png");
+  imgbg = loadImage("assets/bg1.jpg");
+  homepageSound = loadSound("assets/homepage.ogg");
+}
 
 function setup() {
-  let canvas = createCanvas(800, 500);
+  let canvas = createCanvas(800, 600);
   canvas.parent("p5-canvas-container");
-
-
+  imageMode(CENTER);
+  homepageSound.play();
 }
 
 function draw() {
   background(192, 235, 255);
-  fill(217, 224, 252);
-  circle(370, 210, 70);
 
-  fill(239, 230, 235);
-  circle(450, 210, 70);
+  image(imgbg, width / 2, height / 2, 800, 900);
+  push();
+  translate(width / 2, height / 2);
+  rotate(frameCount * 0.01);
+  image(img1, 0, 0, 400, 400);
+  pop();
 
-  fill(255, 225, 241);
-  circle(370, 280, 70);
-
-  fill(236, 180, 191);
-  circle(450, 280, 70);
-
-  fill(209, 239, 238);
-  rect(700, 250, 50, 100);
-
+  let c = get(mouseX, mouseY);
 
 }
+

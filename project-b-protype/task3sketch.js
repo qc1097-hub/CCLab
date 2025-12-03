@@ -1,24 +1,31 @@
+let img1;
+let homepageSound;
+
+function preload() {
+  img1 = loadImage("assets/donut.png");
+  homepageSound = loadSound("assets/task3.ogg");
+}
 
 function setup() {
-  let canvas = createCanvas(800, 500);
+  let canvas = createCanvas(800, 400);
   canvas.parent("p5-canvas-container");
-
-
+  imageMode(CENTER);
+  homepageSound.play();
 }
 
 function draw() {
-  background(220);
+  background(192, 235, 255);
 
-  fill(255);
-  rect(100, 200, 200, 50);
-  fill(0);
-  text("Back to Homepage!", 150, 225);
+  push();
+  translate(width / 2, height / 2);
+  rotate(frameCount * 0.01);
+  image(img1, 0, 0, 400, 400);
+  pop();
 
   let c = get(mouseX, mouseY);
 
-  if (mouseIsPressed && mouseX <= width && mouseX >= 0 && mouseY >= 0 && mouseY <= height && green(c) == 255) {
+  if (mouseIsPressed && mouseX < width && mouseX > 0 && mouseY < height && mouseY > 0) {
     window.location.href = "homepage4index.html";
   }
-
 
 }

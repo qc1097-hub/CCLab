@@ -9,32 +9,42 @@ CCLaboratories Biodiversity Atlas
 <html>
 
 <head>
-    <title>[ Instruction Page ]</title>
+    <title>[ Instruction ]</title>
 
     <!-- allow special characters, including Arabic, Chinese, Korean, Japanese, etc. -->
     <meta charset="UTF-8">
     <!-- link the style sheet -->
     <link rel="stylesheet" type="text/css" href="instructionstyle.css">
-    <!-- import p5.js library -->
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js"></script>
+
+    <!-- prevent scrolling -->
     <script>
-        // prevent scrolling when spacebar and arrow keys are pressed.
-        window.addEventListener("keydown", function (e) { if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) { e.preventDefault(); } }, false);
+        window.addEventListener("keydown", function (e) {
+            if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+        }, false);
     </script>
 
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Asset&family=DM+Serif+Text:ital@0;1&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
 
+    <!-- p5.js (keep ONLY this version) -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/addons/p5.sound.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="instructionstyle.css">
+    <meta charset="utf-8" />
 
 </head>
 
 <body>
     <!-- title -->
     <div id="title-wrapper">
-        <h1 class="headline black"> Instruction Page </h1>
+        <h1 class="headline black"> Instruction </h1>
     </div>
 
     <!-- main content -->
@@ -42,24 +52,43 @@ CCLaboratories Biodiversity Atlas
         <div id="p5-canvas-container">
             <!-- This is where your p5 sketch will be appended and appear! -->
 
-            <!-- main content -->
-            <div id="main-wrapper">
-                <div id="p5-canvas-container">
-                    <!-- This is where your p5 sketch will be appended and appear! -->
-                </div>
-                <div class="two-columns">
-                    <div class="left">
-                        <p><a href="index.html">Back to Homepage!</a></p>
-                    </div>
+        </div>
+
+        <div class="two-columns">
+            <div class="left">
+                <p>Welcome to <strong>Friendship Donut</strong>!</p>
+
+                <p>In this interactive storytelling game, you will take on a third-person perspective to help four
+                    long-lost friends plan a long-awaited reunion.</p>
+
+                <p>Click the glowing donut pieces on the homepage to enter different tasks. If you feel stuck, use the
+                    Hint button to get new clues.</p>
+
+                <p>Throughout the game, you will help them pick a reunion date, gather items to recreate an old photo,
+                    buy their favorite donuts from student days, and finally take a photo for them at the reunion.</p>
+
+                <p>Most importantly — no matter when you're playing this game, don't forget to reach out to your friends
+                    too!</p>
 
 
-                    <!-- Home: Link back to the ATLAS page-->
-                    <div id="home">
-                        <a href="https://cclab.work/atlas">Back to the ATLAS</a>
-                    </div>
+            </div>
 
-                    <!-- Include your sketch.js file here -->
-                    <script src="instructionsketch.js" type="text/javascript"> </script>
+            <div class="left">
+                <p><a href="index.html">Back to Homepage!</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home: Link back to the ATLAS page-->
+    <div id="home">
+        <a href="https://cclab.work/atlas">Back to the ATLAS</a>
+    </div>
+
+    <!-- Include your sketch.js file -->
+    <script src="instructionsketch.js" type="text/javascript"></script>
+    </div>
+    </div>
+
 </body>
 
 </html>
