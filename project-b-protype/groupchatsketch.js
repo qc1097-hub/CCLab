@@ -67,7 +67,7 @@ function setup() {
   rect(100, 1660, 500, 50);
   fill(0, 0, 0);
   textSize(18);
-  text('12:10', 50, 25);
+  text('12:06', 50, 25);
   textSize(30);
   text('donut hunters(4)', 290, 60);
   circle(770, 53, 3);
