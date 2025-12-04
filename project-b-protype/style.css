@@ -105,4 +105,10 @@ canvas {
 #p5-canvas-container {
     margin: auto;
     width: 800px;
+    margin-top: 300px;
+}
+
+#links {
+    text-align: center;
+    margin-top: 40px;
 }

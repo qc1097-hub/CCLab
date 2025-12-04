@@ -4,12 +4,12 @@ let homepageSound;
 
 function preload() {
   img1 = loadImage("assets/donut.png");
-  imgbg = loadImage("assets/bg1.jpg");
+  imgbg = loadImage("assets/bgs.png");
   homepageSound = loadSound("assets/homepage.ogg");
 }
 
 function setup() {
-  let canvas = createCanvas(800, 600);
+  let canvas = createCanvas(800, 400);
   canvas.parent("p5-canvas-container");
   imageMode(CENTER);
   homepageSound.play();
@@ -18,7 +18,7 @@ function setup() {
 function draw() {
   background(192, 235, 255);
 
-  image(imgbg, width / 2, height / 2, 800, 900);
+  image(imgbg, width / 2, height / 2, 1000, 650);
   push();
   translate(width / 2, height / 2);
   rotate(frameCount * 0.01);

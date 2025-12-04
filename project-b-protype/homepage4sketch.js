@@ -1,8 +1,10 @@
 let img1;
+let imgbg;
 let homepageSound;
 
 function preload() {
   img1 = loadImage("assets/donut.png");
+  imgbg = loadImage("assets/bgs.png");
   homepageSound = loadSound("assets/homepage.ogg");
 }
 
@@ -15,6 +17,8 @@ function setup() {
 
 function draw() {
   background(192, 235, 255);
+  image(imgbg, width / 2, height / 2, 1000, 650);
+
 
   push();
   translate(width / 2, height / 2);
