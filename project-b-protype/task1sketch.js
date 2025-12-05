@@ -1,8 +1,8 @@
-let img1;
+let imgc2;
 let homepageSound;
 
 function preload() {
-  img1 = loadImage("assets/donut.png");
+  imgc2 = loadImage("assets/c2.png");
   homepageSound = loadSound("assets/task1.ogg");
 }
 
@@ -16,11 +16,9 @@ function setup() {
 function draw() {
   background(192, 235, 255);
 
-  push();
-  translate(width / 2, height / 2);
-  rotate(frameCount * 0.01);
-  image(img1, 0, 0, 400, 400);
-  pop();
+
+  image(imgc2, 400, 200, 800, 400);
+
 
   let c = get(mouseX, mouseY);
 

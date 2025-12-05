@@ -23,7 +23,7 @@ let nextText = [
   "How about we prepare donut party!",
   "That's great!",
   "We can even took a similar photo!",
-  "That's great! First we should find a time when eveyone is aviliable...",
+  "That's great! First we should find a time when eveyone is available...",
   "And also we should prepare special props to reenact the scene...",
   "we can't forget donuts!!!",
   "and also a new photo!"
