@@ -29,7 +29,7 @@ let nextImage = [];
 let index = 0;
 
 function preload() {
-  imgbg = loadImage("assets/t4bg.png");
+  imgbg = loadImage("assets/gcbg.jpg");
 
   img1 = loadImage("assets/ending1.png");
   img2 = loadImage("assets/ending2.png");
@@ -53,7 +53,7 @@ function preload() {
   img20 = loadImage("assets/ending20.png");
   img21 = loadImage("assets/ep.jpg");
 
-  homepageSound = loadSound("assets/task4.ogg");
+  homepageSound = loadSound("assets/ending.ogg");
 }
 
 function setup() {
@@ -64,7 +64,7 @@ function setup() {
 
 
   nextImage = [img1, img1, img7, img3, img8, img5, img9, img4, img2, img6, img10, img13, img15, img12, img17, img18, img20, img11, img14, img16, img19];
-  image(imgbg, width / 2, height / 2, 800, 800);
+  image(imgbg, width / 2, height / 2, 800, 1727);
 
 }
 
