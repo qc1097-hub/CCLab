@@ -1,10 +1,12 @@
 let img1;
 let imgbg;
+let imgin;
 let homepageSound;
 
 function preload() {
   img1 = loadImage("assets/donut.png");
   imgbg = loadImage("assets/bgs.png");
+  imgin = loadImage("assets/instruction.png");
   homepageSound = loadSound("assets/homepage.ogg");
 }
 
@@ -19,6 +21,7 @@ function draw() {
   background(192, 235, 255);
 
   image(imgbg, width / 2, height / 2, 1000, 650);
+  // image(imgin, 200, height / 2);
   push();
   translate(width / 2, height / 2);
   rotate(frameCount * 0.01);

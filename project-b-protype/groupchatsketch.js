@@ -19,7 +19,7 @@ let nextText = [
   "",
   "I missed you so much...",
   "Maybe we should meet someday...",
-  "That's a great ideal!!!",
+  "That's a great idea!!!",
   "How about we prepare donut party!",
   "That's great!",
   "We can even took a similar photo!",
@@ -42,7 +42,7 @@ function preload() {
   imgp = loadImage("assets/bg.png");
   homepageSound = loadSound("assets/group chat.ogg");
 
-  imghz = loadImage("assets/hezhao.png");
+  imghz = loadImage("assets/gcp.png");
   img1 = loadImage("assets/p1.png");
   img2 = loadImage("assets/p2.png");
   img3 = loadImage("assets/p3.png");
@@ -110,7 +110,7 @@ function mousePressed() {
 
   else if (index == 5) {
     image(nextImage[index], 50, positionY + 35, 40, 40);
-    image(imghz, 225, positionY + 75, 300, 150);
+    image(imghz, 155, positionY + 75, 150, 120);
   }
 
   else if (index == 6) {
@@ -139,12 +139,14 @@ function mousePressed() {
   }
   else if (index == 18) {
     fill(255, 214, 234);
-    rect(100, positionY, 600, 300);
+    rect(100, positionY + 100, 600, 200);
     fill(0);
-    text("Click the blue button below to start your journey!", 150, positionY + 120);
-    text("Hint:", 150, positionY + 240);
-    text("Click those colorful donut pieces to enter different tasks!", 150, positionY + 260);
-    text("Don't forgrt to click the 'Hint' to get extra cues when you get confued!", 150, positionY + 280);
+    text("Click the blue button below to start your journey!", 150, positionY + 150);
+    text("Tip:", 150, positionY + 190);
+    text("When you see the big donut, tap the gray pieces to start a new task. ", 150, positionY + 210);
+    text("Each completed task will true one gray piece into a colorful one!", 150, positionY + 230);
+    text("Try to color all the donuts and get ready for the perfect donut meeting!", 150, positionY + 250);
+    text("Don't forget to click 'Hint' for extra clues if you get confused!", 150, positionY + 270);
   }
 
   positionY += 70;

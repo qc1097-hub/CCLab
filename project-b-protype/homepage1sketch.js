@@ -27,7 +27,7 @@ function draw() {
 
   let c = get(mouseX, mouseY);
 
-  if (mouseIsPressed && red(c) > 245 && red(c) < 255) {
+  if (mouseIsPressed && green(c) < 100) {
     window.location.href = "task1index.html";
   }
 

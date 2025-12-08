@@ -3,7 +3,7 @@ let imgbg;
 let homepageSound;
 
 function preload() {
-  img1 = loadImage("assets/donut.png");
+  img1 = loadImage("assets/donut3.png");
   imgbg = loadImage("assets/bgs.png");
   homepageSound = loadSound("assets/homepage.ogg");
 }
@@ -28,7 +28,7 @@ function draw() {
 
   let c = get(mouseX, mouseY);
 
-  if (mouseIsPressed && green(c) > 75 && green(c) < 85) {
+  if (mouseIsPressed && blue(c) < 20) {
     window.location.href = "task4index.html";
   }
 

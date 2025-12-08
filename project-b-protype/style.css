@@ -28,7 +28,7 @@ body {
 }
 
 .headline {
-    font-size: 3em;
+    font-size: 4em;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 600;
     margin-top: 80px;
@@ -98,4 +98,7 @@ canvas {
 #links {
     text-align: center;
     margin-top: 40px;
+    font-size: 1.4em;
+    font-family: "Funnel Sans", sans-serif;
+    text-decoration-color: rgb(0, 0, 0);
 }
