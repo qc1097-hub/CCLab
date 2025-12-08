@@ -155,7 +155,7 @@ function mousePressed() {
   }
 
   if (state == 5 && mouseX > 550 && mouseY < 100) {
-    window.location.href = "endingindex.html";
+    window.location.href = "Endingindex.html";
   }
 }
 
